@@ -1,0 +1,3 @@
+rootProject.name = 'Bellpoc'
+
+include ':app'

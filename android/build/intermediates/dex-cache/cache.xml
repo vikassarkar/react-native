@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.43.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dd7e9e4044d541b253c526294b9f4985029d846c">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.facebook.react-react-native-0.43.2_686c4abde03d4e54d8f79d9e98694d291d692698.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.facebook.fresco-imagepipeline-1.0.1_9a2a31f3a105613432c96ab27c00979a7a2cd2d5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_d2f58f50edf0f279f95f07bea3d40f38e5dcc919.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.facebook.fresco-fbcore-1.0.1_19e02ef984b0e5745211fd068462b32a2dcffa2a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\okhttp-3.4.1_eedb0b6ddd68960d77559b427cf5d60c10883020.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\bolts-tasks-1.4.0_f48cbe034e4919f730fb07e1729290c0855593e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.4.1\63994437f62bc861bc20c605d12962f7246116d1\okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\okhttp-urlconnection-3.4.1_7226c7359fdc2e38bb80076785814ef818fe8d16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.facebook.soloader-soloader-0.1.0_a9b276f713dcd38abcbb53d29feac72243c29d93.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\jsr305-3.0.0_cf50300407bb52327d651cef9841bde69e67dfe3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.facebook.fresco-drawee-1.0.1_459e41a9004b04f683d453b99697f15bb29b0cf6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\staticlayout-proxy-1.0_652a6ef9d156efa7ad268b921d26c4e13ce72396.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.facebook.fresco-imagepipeline-okhttp3-1.0.1_22095df507d9c3bef007ada0e0b7f8c25b971802.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.android.support-recyclerview-v7-23.4.0_c469f19632ede25c0ed994bfa45e0d1986dccb8f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.facebook.fresco-fresco-1.0.1_408ba1ca777c9408f22e111bddaf2dd0bf2b7965.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\library-2.4.0_95894ec6e032006d9eb42dbc7226fbdf9859c02e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-ws\3.4.1\8ace66ef7002d98f633377c9e67daeeb196d8c3b\okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\okhttp-ws-3.4.1_321079e59a29d349e6b5f2b952be63f8948fa1be.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\javax.inject-1_bece05cf331587d785125feaa132fde23316e4f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\animated-base-support\0.14.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0d5b58a87cc359507cd4b835be9d7c69eb7f6390">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.facebook.fresco-animated-base-support-0.14.1_999e937deeb3c636cb341219b2411f21ecc0009a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.43.2\jars\libs\infer-annotations-1.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\infer-annotations-1.5_f4e004c20c60410fef4fcef30cd2946710434de0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\okio-1.9.0_897fd89cea5ed78124bd4983b9167215045156dc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-23.0.1_1e0ebbc093b2174beb01d34147f7c358fb5b323c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\support-annotations-24.2.1_c6e06c33e5279201541b6df4678fe3f3926fbd60.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.facebook.fresco-imagepipeline-base-1.0.1_8dd48800369de976fad3b6811f998f217762f034.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\internal_impl-23.4.0_c5e9cfb6853a1077be07d11aa101a17f67aa6960.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\animated-base\0.14.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4586985d8e3ab9baaaa0f7a7d5a1b46bec20816f">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.facebook.fresco-animated-base-0.14.1_7febcdde2e271ef9a367330e33dd7505fe2d33d0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.4.0_0ad9032c89b98cdf88c6ab3ab67000539a521e7b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\animated-gif\0.14.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="33d3c017a51ad5721e1d6c6be82239ab73e5458b">
+        <dex dex="C:\Users\vikassar\Desktop\React Native\BELL\Bellpoc\android\app\build\intermediates\pre-dexed\release\com.facebook.fresco-animated-gif-0.14.1_75a3a88400b19f0a247c2e9580ed474c81774637.jar" />
+    </item>
+
+</items>
