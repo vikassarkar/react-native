@@ -342,10 +342,11 @@ var GiftedListView = React.createClass({
     
     separator: {
       height: 1,
-      backgroundColor: '#CCC'
+      backgroundColor: '#00549A'
     },
     actionsLabel: {
       fontSize: 20,
+      color:"#FFFFFF"
     },
     paginationView: {
       height: 44,

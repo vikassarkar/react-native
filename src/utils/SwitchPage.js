@@ -8,6 +8,9 @@ const SwitchPage = {
 		    case 'page_profile':
 		        Actions.page_profile();
 				break;
+			case 'page_usage':
+		        Actions.page_usage();
+				break;
 		    case 'basecomponent_table':
 		        Actions.basecomponent_table();
 		        break;

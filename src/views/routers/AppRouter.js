@@ -26,6 +26,7 @@ import {
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import DashboardFrameWidget from '../page_dashboard/DashboardFrameWidget';
+import UsageFrameWidget from '../page_usage/UsageFrameWidget';
 import ProfileFrameWidget from '../page_profile/ProfileFrameWidget';
 import AccordionWrapperWidget from '../basecomponents/accordion/AccordionWrapperWidget';
 import TableWrapperWidget from '../basecomponents/table/TableWrapperWidget';
@@ -121,23 +122,28 @@ export default class AppRouter extends Component {
 				   <Scene key="page_dashboard"
 			          	component={DashboardFrameWidget}
 			          	title="Dashboard"
-			        	animation="slide"/>	
+			        	animation="slide"						  	
+						initial={true}/>	
 
 			        <Scene key="basecomponent_table"
 			          	component={TableWrapperWidget}
-			          	title="Table Component"
+			          	title="Table"
 			        	animation="slide"/>	
 
 					<Scene key="basecomponent_accordion"
 			          	component={AccordionWrapperWidget}
-			          	title="Accordion Component"
+			          	title="Accordion"
 			        	animation="slide"/>	
 
 			        <Scene key="page_profile"
 			          	component={ProfileFrameWidget}
 			          	animation="slide"
-			          	title="My Profile"						  	
-						initial={true}/>
+			          	title="My Profile"/>
+
+					<Scene key="page_usage"
+			          	component={UsageFrameWidget}
+			          	animation="slide"
+			          	title="My Usage"/>
 						  
 					<Scene key="basecomponent_table_rowDetails"
 			          	component={RowDetailsWrapperWidget}

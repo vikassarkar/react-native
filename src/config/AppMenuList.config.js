@@ -11,6 +11,11 @@ const menuList = [
     subtitle: 'Your Profile'
   },
   {
+    name: 'MY USAGE',
+    key: 'page_usage',
+    subtitle: 'Your Usage Graphs'
+  },  
+  {
     name: 'TABLE',
     key: 'basecomponent_table',
     subtitle: 'Its base table widget'

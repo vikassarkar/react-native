@@ -12,15 +12,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\vikassar\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="C:\Users\vikassar\Desktop\laptop backup\Git repos\bellpoc\react-native\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_d8e93b77d5c9fd3b18f497277e1cea35fc34c897.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\vikassar\Desktop\laptop backup\Git repos\bellpoc\react-native\android\app\build\intermediates\exploded-aar\com.facebook.fresco\animated-base\0.14.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -30,12 +21,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\vikassar\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="C:\Users\vikassar\Desktop\laptop backup\Git repos\bellpoc\react-native\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_d8e93b77d5c9fd3b18f497277e1cea35fc34c897.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\vikassar\Desktop\laptop backup\Git repos\bellpoc\react-native\android\app\build\intermediates\exploded-aar\com.facebook.fresco\animated-base-support\0.14.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="0d5b58a87cc359507cd4b835be9d7c69eb7f6390">
         <dex dex="C:\Users\vikassar\Desktop\laptop backup\Git repos\bellpoc\react-native\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-animated-base-support-0.14.1_bc7e6f5a574551694a615526aeaecac88548efcb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\Desktop\laptop backup\Git repos\bellpoc\react-native\android\app\build\intermediates\exploded-aar\Bellpoc\react-native-charts-wrapper\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9b4c82d3f461282df787606e3a86e6d1015f230">
+        <dex dex="C:\Users\vikassar\Desktop\laptop backup\Git repos\bellpoc\react-native\android\app\build\intermediates\pre-dexed\debug\Bellpoc-react-native-charts-wrapper-unspecified_b8ad8691fe460c5cb5b8217a976ddae87a643692.jar" />
     </item>
     <item
         is-multidex="false"
@@ -225,6 +234,15 @@
         revision="23.0.1"
         sha1="33d3c017a51ad5721e1d6c6be82239ab73e5458b">
         <dex dex="C:\Users\vikassar\Desktop\laptop backup\Git repos\bellpoc\react-native\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-animated-gif-0.14.1_2ac6d778c2c7928ca23693f30f06f23819076dd4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vikassar\.gradle\caches\modules-2\files-2.1\com.github.PhilJay\MPAndroidChart\v3.0.2\5d4eb08a326bdbd7fbbddc769666898c9936b282\MPAndroidChart-v3.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5d4eb08a326bdbd7fbbddc769666898c9936b282">
+        <dex dex="C:\Users\vikassar\Desktop\laptop backup\Git repos\bellpoc\react-native\android\app\build\intermediates\pre-dexed\debug\MPAndroidChart-v3.0.2_82e1fe302617de9a0c5817011e6f34bcdad233e9.jar" />
     </item>
     <item
         is-multidex="false"

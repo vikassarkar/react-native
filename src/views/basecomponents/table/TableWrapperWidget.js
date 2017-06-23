@@ -118,10 +118,15 @@ export default class TableWrapperWidget extends Component {
           withSections={false} // enable sections
           customStyles={{
             paginationView: {
-              backgroundColor: '#eee',
+              backgroundColor: '#00549A',
+              width:'95%',
+              alignItems: 'center',
+		          alignSelf: 'center',
+              padding:7,
+              marginTop:20
             },
           }}
-          refreshableTintColor="blue"
+          refreshableTintColor="#FFFFFF"
         />
       </View>
     );
@@ -134,6 +139,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF'
   },  
   row: {
-    padding: 10
+    width:'95%',
+		alignSelf: 'center',
+    padding: 15,
+    borderColor: '#75B8BE', 
+		borderBottomWidth: 1.5,
   }
 });

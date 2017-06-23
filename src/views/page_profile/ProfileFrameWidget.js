@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		alignSelf: 'center',
 		justifyContent: 'center',
-		fontSize:16,
+		fontSize:12,
 		fontWeight:'bold',
 		color:'#FFFFFF'
 	},
@@ -151,20 +151,20 @@ const styles = StyleSheet.create({
 		paddingTop:20
 	},
 	customerName:{
-		fontSize:20,
+		fontSize:15,
 	},
 	header: {
         width: '100%',
         flexDirection: 'row',
         backgroundColor: '#00549A',
-        padding: 30,
+        padding: 25,
 		marginTop:10
     },
     headerText: {
         width: '90%',
         textAlign: 'left',        
         alignItems: 'flex-end',
-        fontSize: 18,
+        fontSize: 15,
         fontWeight: '500',
         color:"#FFFFFF"
     },

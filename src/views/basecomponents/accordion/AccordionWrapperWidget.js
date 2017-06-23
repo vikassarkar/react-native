@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
         width: '90%',
         textAlign: 'left',        
         alignItems: 'flex-end',
-        fontSize: 18,
+        fontSize: 15,
         fontWeight: '500',
         color:"#FFFFFF"
     },
@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
         color:'#00549B'
     },
     selectTitle: {
-        fontSize: 18,
+        fontSize: 15,
         fontWeight: '500',
         padding: 10,
     },
