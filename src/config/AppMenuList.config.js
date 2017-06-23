@@ -2,18 +2,23 @@
 const menuList = [
   {
     name: 'DASHBOARD',
-    key: 'dashboard',
+    key: 'page_dashboard',
     subtitle: 'Your Dashboard'
   },
-   {
-    name: 'HOME',
-    key: 'home',
-    subtitle: 'Your Home '
+  {
+    name: 'MY PROFILE',
+    key: 'page_profile',
+    subtitle: 'Your Profile'
   },
   {
-    name: 'SECOND SCREEN',
-    key: 'secondScreen',
-    subtitle: 'Your Second Screen'
+    name: 'TABLE',
+    key: 'basecomponent_table',
+    subtitle: 'Its base table widget'
+  },
+  {
+    name: 'ACCORDION',
+    key: 'basecomponent_accordion',
+    subtitle: 'Its base accordion widget'
   }
 ]
 

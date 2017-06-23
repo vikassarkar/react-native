@@ -17,7 +17,7 @@ import {
 } from 'react-native-elements';
 import SwitchPage from '../utils/SwitchPage'
 
-import AppRouter from './common/AppRouter';
+import AppRouter from './routers/AppRouter';
 import menuList from '../config/AppMenuList.config';
 
 export default class AppMainView extends Component {

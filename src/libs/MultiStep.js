@@ -71,7 +71,7 @@ export default class MultiStep extends Component {
 
     gotoStep(stepData, stepNumber){
         if(this.state.allowJump){
-             alert(stepNumber)
+             //alert(stepNumber)
             this.setState({curState: stepNumber})
             if((stepNumber+1) == this.state.steplist.length){
                 this.finishWizard()

@@ -8,7 +8,7 @@ import {
   StatusBar
 } from 'react-native';
 
-import AuthRouter from './src/views/auth/AuthRouter';
+import AuthRouter from './src/views/routers/AuthRouter';
 import AppMainView from './src/views/AppMainView';
 import SplashScreen from './src/views/SplashScreen';
 
@@ -36,7 +36,7 @@ export default class Bellpoc extends Component {
         var self = this;
         setTimeout(function() {
             self.setState({ appMounted : true});
-       }, 500);        
+       }, 3000);        
     }
 
     render() {
