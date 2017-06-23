@@ -19,9 +19,9 @@ export default class Bellpoc extends Component {
         super(props)
 
         this.state  = {
-            isLoggedIn: false,
+            isLoggedIn: true,
             username : '',
-            appMounted:false
+            appMounted:true
         }
     }   
     _authGateway= (component) => {

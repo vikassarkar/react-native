@@ -12,51 +12,53 @@ import * as Animatable from 'react-native-animatable';
 import Collapsible from 'react-native-collapsible';
 import Accordion from 'react-native-collapsible/Accordion';
 
-const BACON_IPSUM = 'Bacon ipsum dolor amet chuck turducken landjaeger tongue spare ribs. Picanha beef prosciutto meatball turkey shoulder shank salami cupim doner jowl pork belly cow. Chicken shankle rump swine tail frankfurter meatloaf ground round flank ham hock tongue shank andouille boudin brisket. ';
+import HomeData from '../../../resourcesApi/HomeAccordionData';
 
-const CONTENT = [
-    {
-        title: 'First Collapsible',
-        content: BACON_IPSUM,
-    },
-    {
-        title: 'Second Collapsible',
-        content: BACON_IPSUM,
-    },
-    {
-        title: 'Third Collapsible',
-        content: BACON_IPSUM,
-    },
-    {
-        title: 'Fourth Collapsible',
-        content: BACON_IPSUM,
-    },
-    {
-        title: 'Fifth Collapsible',
-        content: BACON_IPSUM,
-    },
-];
-
+const CONTENT =[
+        {
+            title: 'First Collapsible',
+            content: 'Bacon ipsum dolor amet chuck turducken landjaeger tongue spare ribs. Picanha beef prosciutto meatball turkey shoulder shank salami cupim doner jowl pork belly cow. Chicken shankle rump swine tail frankfurter meatloaf ground round flank ham hock tongue shank andouille boudin brisket. ',
+        },
+        {
+            title: 'Second Collapsible',
+            content: 'Bacon ipsum dolor amet chuck turducken landjaeger tongue spare ribs. Picanha beef prosciutto meatball turkey shoulder shank salami cupim doner jowl pork belly cow. Chicken shankle rump swine tail frankfurter meatloaf ground round flank ham hock tongue shank andouille boudin brisket. ',
+        },
+        {
+            title: 'Third Collapsible',
+            content: 'Bacon ipsum dolor amet chuck turducken landjaeger tongue spare ribs. Picanha beef prosciutto meatball turkey shoulder shank salami cupim doner jowl pork belly cow. Chicken shankle rump swine tail frankfurter meatloaf ground round flank ham hock tongue shank andouille boudin brisket. ',
+        },
+        {
+            title: 'Fourth Collapsible',
+            content: 'Bacon ipsum dolor amet chuck turducken landjaeger tongue spare ribs. Picanha beef prosciutto meatball turkey shoulder shank salami cupim doner jowl pork belly cow. Chicken shankle rump swine tail frankfurter meatloaf ground round flank ham hock tongue shank andouille boudin brisket. ',
+        },
+        {
+            title: 'Fifth Collapsible',
+            content: 'Bacon ipsum dolor amet chuck turducken landjaeger tongue spare ribs. Picanha beef prosciutto meatball turkey shoulder shank salami cupim doner jowl pork belly cow. Chicken shankle rump swine tail frankfurter meatloaf ground round flank ham hock tongue shank andouille boudin brisket. ',
+        }
+    ];
 const SELECTORS = [
-    {
-        title: 'First',
-        value: 0,
-    },
-    {
-        title: 'Third',
-        value: 2,
-    },
-    {
-        title: 'None',
-        value: false,
-    },
-];
+        {
+            title: 'First',
+            value: 0,
+        },
+        {
+            title: 'Third',
+            value: 2,
+        },
+        {
+            title: 'None',
+            value: false,
+        }
+    ];
 
 export default class AccordionWrapperWidget extends Component {
-    state = {
-        activeSection: false,
-        collapsed: true,
-    };
+    constructor(){
+        super();
+        this.state = {
+                activeSection: false,
+                collapsed: true,
+        };
+    }
 
     _toggleExpanded = () => {
         this.setState({ collapsed: !this.state.collapsed });

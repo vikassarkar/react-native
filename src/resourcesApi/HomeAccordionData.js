@@ -1,53 +1,38 @@
 const HomeData = {
-    data: [{
-            title: "1 row",
-            rowIdentites: "1",
-            description: "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+    content: [
+        {
+            title: 'First Collapsible',
+            content: 'Bacon ipsum dolor amet chuck turducken landjaeger tongue spare ribs. Picanha beef prosciutto meatball turkey shoulder shank salami cupim doner jowl pork belly cow. Chicken shankle rump swine tail frankfurter meatloaf ground round flank ham hock tongue shank andouille boudin brisket. ',
         },
         {
-            title: "2 row",
-            rowIdentites: "2",
-            description: "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+            title: 'Second Collapsible',
+            content: 'Bacon ipsum dolor amet chuck turducken landjaeger tongue spare ribs. Picanha beef prosciutto meatball turkey shoulder shank salami cupim doner jowl pork belly cow. Chicken shankle rump swine tail frankfurter meatloaf ground round flank ham hock tongue shank andouille boudin brisket. ',
         },
         {
-            title: "3 row",
-            rowIdentites: "3",
-            description: "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+            title: 'Third Collapsible',
+            content: 'Bacon ipsum dolor amet chuck turducken landjaeger tongue spare ribs. Picanha beef prosciutto meatball turkey shoulder shank salami cupim doner jowl pork belly cow. Chicken shankle rump swine tail frankfurter meatloaf ground round flank ham hock tongue shank andouille boudin brisket. ',
         },
         {
-            title: "4 row",
-            rowIdentites: "4",
-            description: "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+            title: 'Fourth Collapsible',
+            content: 'Bacon ipsum dolor amet chuck turducken landjaeger tongue spare ribs. Picanha beef prosciutto meatball turkey shoulder shank salami cupim doner jowl pork belly cow. Chicken shankle rump swine tail frankfurter meatloaf ground round flank ham hock tongue shank andouille boudin brisket. ',
         },
         {
-            title: "5 row",
-            rowIdentites: "5",
-            description: "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+            title: 'Fifth Collapsible',
+            content: 'Bacon ipsum dolor amet chuck turducken landjaeger tongue spare ribs. Picanha beef prosciutto meatball turkey shoulder shank salami cupim doner jowl pork belly cow. Chicken shankle rump swine tail frankfurter meatloaf ground round flank ham hock tongue shank andouille boudin brisket. ',
+        }
+    ],
+    selector:[
+        {
+            title: 'First',
+            value: 0,
         },
         {
-            title: "6 row",
-            rowIdentites: "6",
-            description: "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+            title: 'Third',
+            value: 2,
         },
         {
-            title: "7 row",
-            rowIdentites: "7",
-            description: "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
-        },
-        {
-            title: "8 row",
-            rowIdentites: "8",
-            description: "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
-        },
-        {
-            title: "9 row",
-            rowIdentites: "9",
-            description: "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
-        },
-        {
-            title: "10 row",
-            rowIdentites: "10",
-            description: "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+            title: 'None',
+            value: false,
         }
     ]
 }

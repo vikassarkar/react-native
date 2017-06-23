@@ -121,8 +121,7 @@ export default class AppRouter extends Component {
 				   <Scene key="page_dashboard"
 			          	component={DashboardFrameWidget}
 			          	title="Dashboard"
-			        	animation="slide"						  	
-						initial={true}/>	
+			        	animation="slide"/>	
 
 			        <Scene key="basecomponent_table"
 			          	component={TableWrapperWidget}
@@ -137,7 +136,8 @@ export default class AppRouter extends Component {
 			        <Scene key="page_profile"
 			          	component={ProfileFrameWidget}
 			          	animation="slide"
-			          	title="My Profile"/>
+			          	title="My Profile"						  	
+						initial={true}/>
 						  
 					<Scene key="basecomponent_table_rowDetails"
 			          	component={RowDetailsWrapperWidget}
