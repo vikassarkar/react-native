@@ -12,7 +12,7 @@ import GiftedListView from '../../../libs/GiftedListView';
 import Tabs from 'react-native-tabs';
 import { Actions, ActionConst } from 'react-native-router-flux';
 
-import SwitchPage from '../../../utils/SwitchPage'
+import RouteActions from '../../routers/RouteActions'
 import HomeData from '../../../resourcesApi/HomeTableData'
 import TableSearchBarTabs from './components/TableSearchBarTabs'
 
@@ -77,7 +77,7 @@ export default class TableWrapperWidget extends Component {
    */
   _rowPressed(rowData) {
     alert(rowData.title);
-    SwitchPage.route('basecomponent_table_rowDetails', Actions);
+    RouteActions.route('basecomponent_table_rowDetails', Actions);
   }
 
   /**

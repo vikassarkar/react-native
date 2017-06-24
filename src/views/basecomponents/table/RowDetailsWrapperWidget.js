@@ -11,7 +11,7 @@ import {
 import { Actions, ActionConst } from 'react-native-router-flux';
 import {Grid, Col, Row} from 'react-native-elements';
 
-import SwitchPage from '../../../utils/SwitchPage';
+import RouteActions from '../../routers/RouteActions';
 import arrowImg from '../../../assets/images/left-arrow.png';
 
 const SIZE = 40;

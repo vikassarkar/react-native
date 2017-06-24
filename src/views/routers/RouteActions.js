@@ -1,5 +1,5 @@
 
-const SwitchPage = {
+const RouteActions = {
     route: function(action, Actions){
         switch(action) {
 			case 'page_dashboard':
@@ -27,4 +27,4 @@ const SwitchPage = {
 }
 
 
-export default SwitchPage
+export default RouteActions

@@ -7,7 +7,7 @@ import {Grid, Col, Row} from 'react-native-elements';
 import Image from 'react-native-image-progress';
 import * as Progress from 'react-native-progress';
 
-import SwitchPage from '../../../utils/SwitchPage'
+import RouteActions from '../../routers/RouteActions'
 import componentsList from '../../../resourcesApi/DashboardListData';
 
 const {width, height} = Dimensions.get('window');
@@ -21,7 +21,7 @@ export default class GridCardsComponent extends Component {
 
   _viewComponent (obj){
     if(obj.action){
-      SwitchPage.route(obj.action, Actions);
+      RouteActions.route(obj.action, Actions);
     }else{
       alert("!!!!!!! "+obj.name+" page Coming Soon !!!!!!!")
     }

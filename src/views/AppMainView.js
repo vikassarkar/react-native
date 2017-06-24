@@ -15,7 +15,7 @@ import {
   	ListItem,
   	SideMenu
 } from 'react-native-elements';
-import SwitchPage from '../utils/SwitchPage'
+import RouteActions from './routers/RouteActions'
 
 import AppRouter from './routers/AppRouter';
 import menuList from '../config/AppMenuList.config';
@@ -46,7 +46,7 @@ export default class AppMainView extends Component {
 	    this.setState({ 
 	        routeData : data
 	    });   
-			SwitchPage.route(data.key, Actions)
+			RouteActions.route(data.key, Actions)
 			this.setState({
 				menuOpen: !this.state.menuOpen
 			})
