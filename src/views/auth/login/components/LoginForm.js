@@ -7,7 +7,10 @@ import {
 	Text,
 	Animated
 } from 'react-native';
+
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+
+import LoginButton from './LoginButton';
 
 export default class LoginForm extends Component {
 	constructor(props) {
@@ -24,11 +27,10 @@ export default class LoginForm extends Component {
 
 	_loginInputChanged(feildName, val){
 		if (feildName == "username"){
-			this.setState({	formUsername: val})
+			this.setState({	formUsername: val});
 		}else if(feildName == "password"){
-			this.setState({	formPassword: val})
+			this.setState({	formPassword: val});
 		}
-		this.props.onFeildChangeEvent(this)
 	}
 
 	_loginInputFocused(feildName){
@@ -141,6 +143,7 @@ export default class LoginForm extends Component {
 						returnKeyLabel='next'
 						blurOnSubmit={true}/>
 				</View>
+				<LoginButton onLoginEvent={(comp) => this.props.onLoginEvent(comp)} state = {this.state}/>
 			</View>
 		);
 	}

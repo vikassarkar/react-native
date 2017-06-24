@@ -13,7 +13,6 @@ import {Grid, Col, Row} from 'react-native-elements';
 import Logo from './components/Logo';
 import LoginForm from './components/LoginForm';
 import Wallpaper from './components/Wallpaper';
-import LoginButton from './components/LoginButton';
 import LoginLinkSection from './components/LoginLinkSection';
 
 export default class LoginWidget extends Component {
@@ -27,17 +26,11 @@ export default class LoginWidget extends Component {
         }
     }   
 
-    _onFeildChangeEvent= (component) => {
-        this.setState({ 
-            username: component.state.formUsername,
-            password: component.state.formPassword
-        });        
-    }
     _onLoginEvent= (component) => {
         this.setState({ 
             isLoggedIn: component.state.isLoggedIn
         }); 
-         this.props.onButtonEvent(this);              
+        this.props.onButtonEvent(this);              
     }
 
      componentDidMount() {      
@@ -53,12 +46,12 @@ export default class LoginWidget extends Component {
                             <Row size={30}>
                                 <Logo />
                             </Row>
-                            <Row size={30}>
-                                <LoginForm onFeildChangeEvent={(comp) => this._onFeildChangeEvent(comp)} />
+                            <Row size={60}>
+                                <LoginForm onLoginEvent={(comp) => this._onLoginEvent(comp)}/>
                             </Row>                    
-                            <Row size={30}>
+                            {/*<Row size={30}>
                                 <LoginButton onLoginEvent={(comp) => this._onLoginEvent(comp)} username={this.state.username} password={this.state.password}/>
-                            </Row>
+                            </Row>*/}
                             <Row size={20}>
                                 <LoginLinkSection onAuthRoute = {this.props.onAuthRoute}/>
                             </Row>

@@ -7,6 +7,7 @@ import {Grid, Col, Row} from 'react-native-elements';
 import Image from 'react-native-image-progress';
 import * as Progress from 'react-native-progress';
 
+import store from '../../../../src/redux_store/StoreConfiguration';
 import RouteActions from '../../routers/RouteActions'
 import componentsList from '../../../resourcesApi/DashboardListData';
 
@@ -16,7 +17,8 @@ export default class GridCardsComponent extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {};    
+    //console.warn(store.getState()); 
   }
 
   _viewComponent (obj){

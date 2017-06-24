@@ -26,7 +26,9 @@ export default class DashboardFrameWidget extends Component {
       dashboardVisible:false
     };
   }
+  _test(p){
 
+  }
   componentDidMount(){
     
   }
@@ -39,7 +41,7 @@ export default class DashboardFrameWidget extends Component {
                   style={styles.carauselSize}
                   autoplay
                   bullets
-                  onAnimateNextPage={(p) => console.log(p)}>
+                  onAnimateNextPage={(p) => this._test(p)}>
                   <View style={[styles.slideSize,  styles.sliderStyle]}>
                     <SliderOne/>
                   </View>

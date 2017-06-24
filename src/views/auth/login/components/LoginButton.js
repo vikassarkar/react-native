@@ -11,6 +11,8 @@ import {
 } from 'react-native';
 import { Actions, ActionConst } from 'react-native-router-flux';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import {UserAction} from '../../../../redux_actions/AuthAction';
+import store from '../../../../redux_store/StoreConfiguration';
 
 export default class LoginButton extends Component {
 	constructor(props) {
@@ -24,17 +26,17 @@ export default class LoginButton extends Component {
 	}
 
 	_onPress() {
+		let self = this;
 		this.setState({isLoading:true});
-
-		//console.warn(this.props.username +"::::::"+this.props.password)
 		//on login succes call below timeout methods
 		this.setState({isLoading: false, isLoggedIn: true });
 		setTimeout(() => {
 			this._onGrow(); //call when login success
 		}, 1000);
-		setTimeout(() => {
+		setTimeout(() => {		  
+			store.dispatch(UserAction({userName:this.props.state.formUsername}));
 			this.growAnimated.setValue(0);
-			this.props.onLoginEvent(this)
+			this.props.onLoginEvent(this);				        	
 		}, 1500);
 
 		//on failure call dialog for info to user
