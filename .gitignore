@@ -37,11 +37,13 @@ npm-debug.log
 yarn-error.log
 
 android/app/build
+android/.gradle/2.14.1
 
 # BUCK
 buck-out/
 \.buckd/
 *.keystore
+
 
 # fastlane
 #
