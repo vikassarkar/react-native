@@ -144,7 +144,6 @@ export default class LoginForm extends Component {
 								maxLength = {12}
 								placeholderTextColor="#D3D3D3"
 								secureTextEntry={true}
-								inlineImageLeft=""
 								underlineColorAndroid="transparent"
 								inlineImageLeft="passwordImg"
 								style={ styles.passwordInput}

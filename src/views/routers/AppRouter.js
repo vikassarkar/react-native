@@ -115,11 +115,10 @@ export default class AppRouter extends Component {
 			  createReducer={reducerCreate} 
 			  hideNavBar={false} 
 			  navigationBarStyle={styles.navHeader}
-			  titleStyle={styles.centerTitle}
+			  titleStyle={[styles.centerTitle, styles.navTitle]}
 			  leftButtonStyle={styles.navBack}
 			  backButtonImage={backImg}
 			  renderLeftButton={() => this._renderLeftNav()}
-			  titleStyle={styles.navTitle}
 			  renderRightButton={() => this._renderRightNav()}
 			  onExitApp={() => this._exitApp()}>
 			  {/*backAndroidHandler={() => this._handleAndroidBack()}>*/}
