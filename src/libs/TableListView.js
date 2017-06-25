@@ -4,8 +4,10 @@
  */
 'use strict';
 
+/**
+ * Import React & React-Native Dependencies
+ */
 import React from 'react';
-
 import {
   ListView,
   Platform,
@@ -16,24 +18,33 @@ import {
   ScrollView
 } from 'react-native'
 
-import GiftedSpinner from'react-native-gifted-spinner';
-// small helper function which merged two objects into one
+/**
+ * External libraries dependencies
+ */
+import GiftedSpinner from 'react-native-gifted-spinner';
+
+/**
+ * small helper function which merged two objects into one
+ */
 function MergeRecursive(obj1, obj2) {
   for (var p in obj2) {
     try {
-      if ( obj2[p].constructor==Object ) {
+      if (obj2[p].constructor == Object) {
         obj1[p] = MergeRecursive(obj1[p], obj2[p]);
       } else {
         obj1[p] = obj2[p];
       }
-    } catch(e) {
+    } catch (e) {
       obj1[p] = obj2[p];
     }
   }
   return obj1;
 }
 
-var GiftedListView = React.createClass({
+/**
+ * Create Table list view table-widget 
+ */
+var TableListView = React.createClass({
   offset: 0,
   getDefaultProps() {
     return {
@@ -137,7 +148,7 @@ var GiftedListView = React.createClass({
     );
   },
   headerView() {
-    if (this.state.paginationStatus === 'firstLoad' || !this.props.headerView){
+    if (this.state.paginationStatus === 'firstLoad' || !this.props.headerView) {
       return null;
     }
     return this.props.headerView();
@@ -202,7 +213,7 @@ var GiftedListView = React.createClass({
   },
 
   componentDidMount() {
-    this.props.onFetch(this._getPage(), this._postRefresh, {firstLoad: true});
+    this.props.onFetch(this._getPage(), this._postRefresh, { firstLoad: true });
   },
 
   setNativeProps(props) {
@@ -210,7 +221,7 @@ var GiftedListView = React.createClass({
   },
 
   _refresh() {
-    this._onRefresh({external: true});
+    this._onRefresh({ external: true });
   },
 
   _onRefresh(options = {}) {
@@ -230,9 +241,9 @@ var GiftedListView = React.createClass({
   },
 
   _onPaginate() {
-    if(this.state.paginationStatus==='allLoaded'){
+    if (this.state.paginationStatus === 'allLoaded') {
       return null
-    }else {
+    } else {
       this.setState({
         paginationStatus: 'fetching',
       });
@@ -305,7 +316,7 @@ var GiftedListView = React.createClass({
       />
     );
   },
-  _onscrollOfList(event){
+  _onscrollOfList(event) {
     var currentOffset = event.nativeEvent.contentOffset.y;
     var direction = currentOffset > this.offset ? 'down' : 'up';
     this.offset = currentOffset;
@@ -316,9 +327,9 @@ var GiftedListView = React.createClass({
   },
 
   render() {
-    return (      
-    
-       <ListView
+    return (
+
+      <ListView
         ref="listview"
         onScroll={this._onscrollOfList}
         dataSource={this.state.dataSource}
@@ -328,7 +339,7 @@ var GiftedListView = React.createClass({
         renderHeader={this.headerView}
         renderFooter={this._renderPaginationView}
         renderSeparator={this.renderSeparator}
-        enableEmptySections = {true}
+        enableEmptySections={true}
         automaticallyAdjustContentInsets={false}
         scrollEnabled={this.props.scrollEnabled}
         canCancelContentTouches={true}
@@ -343,14 +354,14 @@ var GiftedListView = React.createClass({
   },
 
   defaultStyles: {
-    
+
     separator: {
       height: 1,
       backgroundColor: '#00549A'
     },
     actionsLabel: {
       fontSize: 20,
-      color:"#FFFFFF"
+      color: "#FFFFFF"
     },
     paginationView: {
       height: 44,
@@ -373,4 +384,4 @@ var GiftedListView = React.createClass({
 });
 
 
-module.exports = GiftedListView;
+module.exports = TableListView;

@@ -5,7 +5,7 @@
 'use strict';
 
 /**
- * Import React $React-Native Dependencies
+ * Import React & React-Native Dependencies
  */
 import React, { Component } from 'react';
 import {

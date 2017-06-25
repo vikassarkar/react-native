@@ -13,7 +13,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-import GiftedListView from '../../../libs/GiftedListView';
+import TableListView from '../../../libs/TableListView';
 import Tabs from 'react-native-tabs';
 import { Actions, ActionConst } from 'react-native-router-flux';
 
@@ -115,7 +115,7 @@ export default class TableWrapperWidget extends Component {
     <View style={[styles.container, {marginTop:60}]}>
        <TableSearchBarTabs/>
 
-        <GiftedListView
+        <TableListView
           rowView={this._renderRowView}
           onRowPress={(rowData) => this._rowPressed(rowData)}
           onFetch={(page, callback, options) => this._onFetch(page, callback, options)}

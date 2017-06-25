@@ -15,7 +15,6 @@ import {
 import Tabs from 'react-native-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Actions, ActionConst } from 'react-native-router-flux';
-import GiftedListView from '../../../../libs/GiftedListView';
 
 import TableSearchComponent from './TableSearchComponent'
 import TableSortComponent from './TableSortComponent'

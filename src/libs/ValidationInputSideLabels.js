@@ -4,6 +4,9 @@
  */
 'use strict';
 
+/**
+ * Import React & React-Native Dependencies
+ */
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -12,10 +15,23 @@ import {
   TextInput, 
   Animated
 } from 'react-native';
-import Rules from './Rules'
 
+
+/**
+ * Import app required files
+ */
+import Rules from './Rules';
+import ColorPalletes from '../assets/styles/style.color.palletes';
+
+/**
+ * Create ValidationInputSideLabels widget
+ */
 export default class ValidationInputSideLabels extends Component{
 
+    /**
+     * Initillize constructor
+     * @param {*} props - property attribute variables assigned in element
+     */
     constructor(props){
         super(props)
         this.state={
@@ -25,7 +41,11 @@ export default class ValidationInputSideLabels extends Component{
 			inputStateKey : this.props.inputStateInitialValue || '' ,
         }
     }
-
+	
+	/**
+	 * map input feild with regx
+	 * @param {*} val 
+	 */
 	_validateInputFeild(val){
 		let validationRules = this.props.validations;
 		let valuesMapped = true;
@@ -41,6 +61,11 @@ export default class ValidationInputSideLabels extends Component{
 		}
 	}
 
+	/**
+	 * change event functionality on input box
+	 * @param {*} key 
+	 * @param {*} val 
+	 */
     _inputChanged(key, val){
 		this.setState({inputStateKey: val, inputDirty: true});
 		let validationValue = this._validateInputFeild(val);
@@ -50,6 +75,11 @@ export default class ValidationInputSideLabels extends Component{
 		}
 	}
 
+	/**
+	 * blur event functionality on input box
+	 * @param {*} key 
+	 * @param {*} val 
+	 */
 	_inputBlured(key, val) {	
 			let self = this;					
 			let validationValue = this._validateInputFeild(val);
@@ -60,25 +90,39 @@ export default class ValidationInputSideLabels extends Component{
 			}
 	}
 	
+	/**
+	 * focus event functionality on input box
+	 * @param {*} key 
+	 * @param {*} val 
+	 */
 	_inputFocused(key, val){
 			if(this.props.inputFocused)
 				this.props.inputFocused(key, val, this.state.isValidInput)
 	}
 
+	/**
+	 * Animation for lable on top of input boxes
+	 */
 	_renderAnimateLabel(){
 			return (
 					<Text style={[styles.labelInputs, {
-							color:this.state.isValidInput? '#00549A': 'red'
+							color:this.state.isValidInput? ColorPalletes.bellBlue: ColorPalletes.bloodRed
 						}]}>{this.props.inputLable}</Text>
 				);
 	}
 
+	/**
+	 * rendering error text messages
+	 */
 	_renderErrorText(){
 		return (
 					<Text style={styles.errorText}>{this.state.invalidMessage}</Text>
 				);
 	}
 
+	/**
+	 * validations of input boxes on submit
+	 */
 	_onSubmitValidateInputs(){
 		this.setState({inputDirty: true});
 		let validationValue = this._validateInputFeild(this.state.inputStateKey);
@@ -88,10 +132,15 @@ export default class ValidationInputSideLabels extends Component{
 		}
 	}
 
+    /**
+     * @REACT DEFAULT METHOD - called on widget render on screen is done
+     */
 	componentDidMount(){
-		console.log('hi')
 	}
 
+    /**
+     * @REACT DEFAULT METHOD - called to render HTML by providing all bindings
+     */
     render(){
         return(
                 <View style={styles.formInput}>
@@ -108,11 +157,11 @@ export default class ValidationInputSideLabels extends Component{
 						placeholder={this.props.placeholder || ''}
 						value={this.state.inputStateKey}
 						maxLength = {this.props.maxLength || 180}
-						placeholderTextColor={this.props.underlineColorAndroid || '#D3D3D3'}
+						placeholderTextColor={this.props.underlineColorAndroid || ColorPalletes.lightGrey}
 						underlineColorAndroid={this.props.underlineColorAndroid || 'transparent'}
 						style={[this.props.style ||  styles.textInput, {
-							borderColor: this.state.isValidInput? '#00549A': 'red', 
-							color:this.state.isValidInput? '#00549A': 'red'
+							borderColor: this.state.isValidInput? ColorPalletes.bellBlue : ColorPalletes.bloodRed, 
+							color:this.state.isValidInput? ColorPalletes.bellBlue: ColorPalletes.bloodRed
 						}]}
 						autoCorrect={this.props.autoCorrect || false}
 						returnKeyLabel={this.props.returnKeyLabel || 'next'}
@@ -126,8 +175,11 @@ export default class ValidationInputSideLabels extends Component{
 				</View>
         )
     }
-}
+};
 
+/**
+ * Create Applications styles
+ */
 const styles = StyleSheet.create({
 	formInput:{
 		width:'100%',
@@ -139,16 +191,16 @@ const styles = StyleSheet.create({
 	textInput:{	
 		width:'100%',	
 		alignSelf: 'center',
-		borderColor: '#00549A', 
+		borderColor: ColorPalletes.bellBlue, 
 		borderBottomWidth: 0.5,
 		fontSize:16,
-		color:'#00549A',
+		color:ColorPalletes.bellBlue,
 		paddingLeft:5,
 		paddingBottom:-1,
 	},
 	labelInputs:{
 		width:'35%',
-		color:'#00549A',
+		color:ColorPalletes.bellBlue,
 		fontSize:16,
 		paddingLeft:5,
 		paddingRight:5,
@@ -160,11 +212,11 @@ const styles = StyleSheet.create({
 	rightSideView:{
 		width:'65%',	
 		alignSelf: 'center',
-		borderColor: '#00549A', 
+		borderColor: ColorPalletes.bellBlue, 
 		alignItems:'flex-end'
 	},
 	errorText:{
-		color:'red',
+		color:ColorPalletes.bloodRed,
 		fontSize:16,
 		paddingLeft:5,
 		paddingTop:5,
