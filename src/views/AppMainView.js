@@ -4,92 +4,123 @@
  */
 'use strict';
 
+/**
+ * Import React & React-Native Dependencies
+ */
 import React, { Component } from 'react';
 import {
-  	StyleSheet,
-  	Text,
-  	View
+	StyleSheet,
+	Text,
+	View
 } from 'react-native';
-import { 
-	Router, 
-	Scene, 
-	Actions, 
-	ActionConst 
+
+/**
+ * Import widget dependent other libraries
+ */
+import {
+	Router,
+	Scene,
+	Actions,
+	ActionConst
 } from 'react-native-router-flux';
 import {
-  	List,
-  	ListItem,
-  	SideMenu
+	List,
+	ListItem,
+	SideMenu
 } from 'react-native-elements';
-import RouteActions from './routers/RouteActions'
 
+/**
+ * Import widget required files
+ */
+import RouteActions from './routers/RouteActions'
 import AppRouter from './routers/AppRouter';
 import MenuList from '../config/AppMenuList.config';
 
+/**
+ * Create App main widget containing all route pages after login
+ */
 export default class AppMainView extends Component {
-	constructor (props) {
-	    super(props)
-	    this.state = {
-	      menuOpen: false,
-	      routeData: MenuList[0]
-	    }
-	    this.toggleSideMenu = this.toggleSideMenu.bind(this)
+
+	/**
+     * Initillize constructor
+     * @param {*} props - property attribute variables assigned in element
+     */
+	constructor(props) {
+		super(props)
+		this.state = {
+			menuOpen: false,
+			routeData: MenuList[0]
+		}
+		this.toggleSideMenu = this.toggleSideMenu.bind(this)
 	}
 
-	toggleSideMenu () {
-	    this.setState({
-	      menuOpen: !this.state.menuOpen
-	    })
+	/**
+	 * toggle menu to open and close
+	 */
+	toggleSideMenu() {
+		this.setState({
+			menuOpen: !this.state.menuOpen
+		})
 	}
 
-	onSideMenuChange (menuOpen, self) {
-	    self.setState({
-	      menuOpen: menuOpen	      
-	    })
+	/**
+	 * event triggered on change of side menu view open/closed
+	 * @param {*} menuOpen 
+	 * @param {*} self 
+	 */
+	onSideMenuChange(menuOpen, self) {
+		self.setState({
+			menuOpen: menuOpen
+		})
 	}
 
-	renderActions (data) {
-	    this.setState({ 
-	        routeData : data
-	    });   
-			RouteActions.route(data.key, Actions)
-			this.setState({
-				menuOpen: !this.state.menuOpen
-			})
+	/**
+	 * actions for routing on menu list items click/press/touch
+	 * @param {*} data 
+	 */
+	renderActions(data) {
+		this.setState({
+			routeData: data
+		});
+		RouteActions.route(data.key, Actions)
+		this.setState({
+			menuOpen: !this.state.menuOpen
+		})
 	}
 
-  	render() {
-  		const AppMenu = (
-					<View style={{flex: 1, backgroundColor: '#ededed', paddingTop: 30}}>
-						<List containerStyle={{marginBottom: 20}}>
-						{
-							MenuList.map((l, i) => (
-								<ListItem
-									onPress={this.renderActions.bind(this, l)}
-									listnumber={i}
-									key={l.key}
-									title={l.name}
-									subtitle={l.subtitle}
-								/>
-							))
-						}
-						</List>
-					</View>
-				)
-
-	  	return (
-		  	<SideMenu
-		        isOpen={this.state.menuOpen}
-		        onChange={(menuOpen) => this.onSideMenuChange(menuOpen, this)}
-		        menuPosition="left"
-		        menu={AppMenu}>
-							<AppRouter 
-								style={{marginTop:60}}
-								toggleSideMenu={this.toggleSideMenu}
-								onButtonEvent = {this.props.onButtonEvent} 
-								state={this.props.state}/>
-	      	</SideMenu>
-					
-	  	);
+    /**
+     * @REACT DEFAULT METHOD - called to render HTML by providing all bindings
+     */
+	render() {
+		const AppMenu = (
+			<View style={{ flex: 1, backgroundColor: '#ededed', paddingTop: 30 }}>
+				<List containerStyle={{ marginBottom: 20 }}>
+					{
+						MenuList.map((l, i) => (
+							<ListItem
+								onPress={this.renderActions.bind(this, l)}
+								listnumber={i}
+								key={l.key}
+								title={l.name}
+								subtitle={l.subtitle}
+							/>
+						))
+					}
+				</List>
+			</View>
+		);
+		return (
+			<SideMenu
+				isOpen={this.state.menuOpen}
+				onChange={(menuOpen) => this.onSideMenuChange(menuOpen, this)}
+				menuPosition="left"
+				menu={AppMenu}>
+				<AppRouter
+					style={{ marginTop: 60 }}
+					toggleSideMenu={this.toggleSideMenu}
+					onButtonEvent={this.props.onButtonEvent}
+					state={this.props.state} />
+			</SideMenu>
+		);
 	}
-}
+};

@@ -4,3 +4,4 @@
 # table disable row
 # search / sort / filter
 # check box to select row
+# remove black color on click of accordion on profile page

@@ -4,6 +4,9 @@
  */
 'use strict';
 
+/**
+ * route actions config for navigating in b/w pages
+ */
 const RouteActions = {
     route: function(action, Actions){
         switch(action) {
@@ -29,7 +32,6 @@ const RouteActions = {
 		        Actions.page_dashboard();
 		}
     }
-}
+};
 
-
-export default RouteActions
+export default RouteActions;
