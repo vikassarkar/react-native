@@ -13,8 +13,8 @@ import { Provider } from 'react-redux';
 import AuthRouter from './src/views/routers/AuthRouter';
 import AppMainView from './src/views/AppMainView';
 import SplashScreen from './src/views/SplashScreen';
-import {AuthAction} from './src/redux_actions/AuthAction';
-import store from './src/redux_store/StoreConfiguration';
+import {AuthAction} from './src/reduxconfig/actions/AuthActions';
+import store from './src/reduxconfig/store/StoreConfiguration';
 
 
 export default class Bellpoc extends Component {
@@ -24,7 +24,7 @@ export default class Bellpoc extends Component {
 
         this.state  = {
             isLoggedIn: false,
-            appMounted:false
+            appMounted:true
         }
     }   
     _authGateway= (component) => {

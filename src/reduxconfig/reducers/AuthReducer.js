@@ -1,5 +1,5 @@
 //creating the reducer to update the store
-import { STORE_AUTH, STORE_USER} from '../redux_actions/AuthAction';
+import { STORE_AUTH, STORE_USER} from '../actions/AuthAction';
 
 const initialState = {
   loginDetails: {
@@ -26,3 +26,6 @@ export default function AuthReducer(state = initialState , action) {
   }
 }
 
+//in reducers index.js if multiple files or reducer functions exist
+//import { combineReducers, createStore } from 'redux'
+//const reducer = combineReducers({ visibilityFilter, todos })

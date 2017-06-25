@@ -8,6 +8,7 @@ import {
 	Animated
 } from 'react-native';
 
+import {Grid, Col, Row} from 'react-native-elements';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import LoginButton from './LoginButton';
@@ -94,57 +95,63 @@ export default class LoginForm extends Component {
 	
 	render() {
 		return (
-			<View style={styles.formContainer}>
-				<View style={styles.formUsername}>
-					{ this.state.displayLabelUsername && 
-						this._renderAnimateLabel("Username")
-					}
-					<FontAwesome
-						name="user"
-						size={25}
-						style={styles.iconStyle}/>
-					<TextInput 
-						onChangeText={(val) => this._loginInputChanged("username", val)}
-						onFocus={() => this._loginInputFocused("username")}
-						onBlur={() => this._loginInputBlured("username")}
-						placeholder="Enter username.."
-						value={this.state.formUsername}
-						maxLength = {40}
-						placeholderTextColor="#D3D3D3"
-						underlineColorAndroid="transparent"
-						inlineImageLeft="usernameImg"
-						style={styles.usernameInput}
-						autoCorrect={false}
-						returnKeyLabel='next'
-						blurOnSubmit={true}/>
-				</View>
-				<View style={styles.formPassword}>
-					{ this.state.displayLabelPassword && 
-						this._renderAnimateLabel("Password")
-					}
-					<FontAwesome
-						name="unlock"
-						size={25}
-						style={styles.iconStyle}/>
-					<TextInput 
-						onChangeText={(val) => this._loginInputChanged("password", val)}
-						onFocus={() => this._loginInputFocused("password")}
-						onBlur={() => this._loginInputBlured("password")}
-						placeholder="Enter password.."
-						value={this.state.formPassword}
-						maxLength = {12}
-						placeholderTextColor="#D3D3D3"
-						secureTextEntry={true}
-						inlineImageLeft=""
-						underlineColorAndroid="transparent"
-						inlineImageLeft="passwordImg"
-						style={ styles.passwordInput}
-						autoCorrect={false}
-						returnKeyLabel='next'
-						blurOnSubmit={true}/>
-				</View>
-				<LoginButton onLoginEvent={(comp) => this.props.onLoginEvent(comp)} state = {this.state}/>
-			</View>
+			<Grid>
+				<Row size={70}>
+					<View style={styles.formContainer}>
+						<View style={styles.formUsername}>
+							{ this.state.displayLabelUsername && 
+								this._renderAnimateLabel("Username")
+							}
+							<FontAwesome
+								name="user"
+								size={25}
+								style={styles.iconStyle}/>
+							<TextInput 
+								onChangeText={(val) => this._loginInputChanged("username", val)}
+								onFocus={() => this._loginInputFocused("username")}
+								onBlur={() => this._loginInputBlured("username")}
+								placeholder="Enter username.."
+								value={this.state.formUsername}
+								maxLength = {40}
+								placeholderTextColor="#D3D3D3"
+								underlineColorAndroid="transparent"
+								inlineImageLeft="usernameImg"
+								style={styles.usernameInput}
+								autoCorrect={false}
+								returnKeyLabel='next'
+								blurOnSubmit={true}/>
+						</View>
+						<View style={styles.formPassword}>
+							{ this.state.displayLabelPassword && 
+								this._renderAnimateLabel("Password")
+							}
+							<FontAwesome
+								name="unlock"
+								size={25}
+								style={styles.iconStyle}/>
+							<TextInput 
+								onChangeText={(val) => this._loginInputChanged("password", val)}
+								onFocus={() => this._loginInputFocused("password")}
+								onBlur={() => this._loginInputBlured("password")}
+								placeholder="Enter password.."
+								value={this.state.formPassword}
+								maxLength = {12}
+								placeholderTextColor="#D3D3D3"
+								secureTextEntry={true}
+								inlineImageLeft=""
+								underlineColorAndroid="transparent"
+								inlineImageLeft="passwordImg"
+								style={ styles.passwordInput}
+								autoCorrect={false}
+								returnKeyLabel='next'
+								blurOnSubmit={true}/>
+						</View>				
+					</View>
+				</Row>
+				<Row size={30}>
+					<LoginButton style={styles.loginButton} onLoginEvent={(comp) => this.props.onLoginEvent(comp)} state = {this.state}/>
+				</Row>
+			</Grid>
 		);
 	}
 }
@@ -201,5 +208,10 @@ const styles = StyleSheet.create({
 		color:'#00549A',
 		top:35,
 		left:0
+	},
+	loginButton:{
+		alignSelf: 'center',
+		alignItems: 'center',
+		justifyContent: 'center'
 	}
 });

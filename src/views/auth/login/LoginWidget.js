@@ -43,7 +43,7 @@ export default class LoginWidget extends Component {
 		return (
                 <Wallpaper>
                         <Grid>
-                            <Row size={30}>
+                            <Row size={25}>
                                 <Logo />
                             </Row>
                             <Row size={60}>
@@ -52,7 +52,7 @@ export default class LoginWidget extends Component {
                             {/*<Row size={30}>
                                 <LoginButton onLoginEvent={(comp) => this._onLoginEvent(comp)} username={this.state.username} password={this.state.password}/>
                             </Row>*/}
-                            <Row size={20}>
+                            <Row size={15}>
                                 <LoginLinkSection onAuthRoute = {this.props.onAuthRoute}/>
                             </Row>
                             {/*<Row size={5}>

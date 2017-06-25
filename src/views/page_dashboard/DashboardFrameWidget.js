@@ -8,6 +8,8 @@ import {
 } from 'react-native';
 import Carousel from 'react-native-looped-carousel';
 
+
+import store from '../../../src/reduxconfig/store/StoreConfiguration';
 import GridCardsComponent from './components/GridCardsComponent'
 import SliderOne from './components/SliderOne'
 import SliderTwo from './components/SliderTwo'
@@ -23,7 +25,8 @@ export default class DashboardFrameWidget extends Component {
 
     this.state = {      
       pageloader: true,
-      dashboardVisible:false
+      dashboardVisible:false,
+      userName: store.getState().userDetails.userName
     };
   }
   _test(p){
@@ -55,6 +58,9 @@ export default class DashboardFrameWidget extends Component {
                     <SliderFour/>
                   </View>
                 </Carousel>
+                { this.state.userName &&
+                  <Text style={styles.userText}>Hi {this.state.userName} Welcome to this app.</Text>
+                }
                 <GridCardsComponent/>
         </ScrollView>
     );
@@ -74,4 +80,10 @@ const styles = StyleSheet.create({
     width: width, 
     height: height
   },
+  userText:{
+    alignSelf:'center',
+    fontSize:15,
+    color:'#00549B',
+    padding:10
+  }
 })
