@@ -4,81 +4,104 @@
  */
 'use strict';
 
+/**
+ * Import React & React-Native Dependencies
+ */
 import React, { Component } from 'react';
 import {
-  Text,
-  View,
-  Dimensions,
-  StyleSheet,
-  ScrollView,
-  Image
+    Text,
+    View,
+    Dimensions,
+    StyleSheet,
+    ScrollView,
+    Image
 } from 'react-native';
-import {Grid, Col, Row} from 'react-native-elements';
 
-const { width, height } = Dimensions.get('window');
+/**
+ * Import widget dependent other libraries
+ */
+import { Grid, Col, Row } from 'react-native-elements';
+
+/**
+ * Import widget required image
+ */
 import sliderOneImage from '../../../assets/images/carouselSlider/slider1.jpg';
 
+/**
+ * define widget constants
+ */
+const { width, height } = Dimensions.get('window');
+
+/**
+ * Create slider one widget
+ */
 export default class SliderOne extends Component {
+    /**
+    * Initillize constructor
+    * @param {*} props
+    */
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
 
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
-
-
-  render() {
-    return (
-         <Grid>
-             <Row size={100}>
-                 <Col size={60}>
-                    <Image style={styles.imageStyle} source={sliderOneImage}/>
-                 </Col>
-                 <Col size={40}>
-                    <View style={styles.sliderContent}>
-                        <Text style={styles.header1}>
-                            Get an amazing phone on an amazing network.
+    /**
+     * @REACT DEFAULT METHOD - called to render HTML by providing all bindings
+     */
+    render() {
+        return (
+            <Grid>
+                <Row size={100}>
+                    <Col size={60}>
+                        <Image style={styles.imageStyle} source={sliderOneImage} />
+                    </Col>
+                    <Col size={40}>
+                        <View style={styles.sliderContent}>
+                            <Text style={styles.header1}>
+                                Get an amazing phone on an amazing network.
                         </Text>
-                        <Text style={styles.paragraph}>                                
-                            There’s never been a better time to get on Canada’s fastest ranked and largest network.
+                            <Text style={styles.paragraph}>
+                                There’s never been a better time to get on Canada’s fastest ranked and largest network.
                         </Text>
-                    </View>
-                 </Col>
-             </Row>
-        </Grid>
-    );
-  }
-}
+                        </View>
+                    </Col>
+                </Row>
+            </Grid>
+        );
+    }
+};
 
+/**
+ * Create widget styles
+ */
 const styles = StyleSheet.create({
-    
-    imageStyle:{
-        height:height/3.4,
-        width:'100%',
-	    alignContent: 'stretch',
+    imageStyle: {
+        height: height / 3.4,
+        width: '100%',
+        alignContent: 'stretch',
     },
-    sliderContent:{
+    sliderContent: {
         alignSelf: 'center',
-		alignItems: 'center',
-		justifyContent: 'center',
-        height:height/3.2,
-        width:'100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: height / 3.2,
+        width: '100%',
         paddingLeft: 5,
         paddingRight: 10,
 
     },
-    header1:{
-        fontSize:16,
+    header1: {
+        fontSize: 16,
         alignSelf: 'center',
-		alignItems: 'center',
-		justifyContent: 'center',
-        textAlign:'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
     },
-    paragraph:{
-        fontSize:11,
+    paragraph: {
+        fontSize: 11,
         alignSelf: 'center',
-		alignItems: 'center',
-		justifyContent: 'center',
-        textAlign:'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
     }
-})
+});

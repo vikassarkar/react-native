@@ -4,6 +4,9 @@
  */
 'use strict';
 
+/**
+ * Import React & React-Native Dependencies
+ */
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -13,24 +16,45 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-import TableListView from '../../../libs/TableListView';
+/**
+ * Import widget dependent other libraries
+ */
 import Tabs from 'react-native-tabs';
 import { Actions, ActionConst } from 'react-native-router-flux';
 
-import {RowAction} from '../../../reduxconfig/actions/EmmitTableActions';
+/**
+ * Import widget required files
+ */
+import ColorPalletes from '../../../assets/styles/style.color.palletes';
+import { RowAction } from '../../../reduxconfig/actions/EmmitTableActions';
 import store from '../../../reduxconfig/store/StoreConfiguration';
-import RouteActions from '../../routers/RouteActions'
-import TableData from '../../../mockstubs/TableData'
-import TableSearchBarTabs from './components/TableSearchBarTabs'
+import RouteActions from '../../routers/RouteActions';
+import TableListView from '../../../libs/TableListView';
+import TableSearchBarTabs from './components/TableSearchBarTabs';
 
+/**
+ * Import widget Mock data
+ */
+import TableData from '../../../mockstubs/TableData';
+
+/**
+ * define widget constants
+ */
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 
+/**
+ * Create table page widget
+ */
 export default class TableWrapperWidget extends Component {
+  /**
+	 * Initillize constructor
+   * @param {*} props
+	 */
   constructor(props) {
     super(props);
-    this.state={
-      highlightColor:'#000',
+    this.state = {
+      highlightColor: ColorPalletes.black,
     }
   }
 
@@ -43,29 +67,29 @@ export default class TableWrapperWidget extends Component {
    */
   _onFetch(page, callback, options) {
     let callbackFn = callback,
-    loadData = [];
+      loadData = [];
     setTimeout(() => {
-      switch(page) {
+      switch (page) {
         case 1:
-            loadData = TableData.data1;
-            break;
+          loadData = TableData.data1;
+          break;
         case 2:
-            loadData = TableData.data2;
-            break;
+          loadData = TableData.data2;
+          break;
         case 3:
-            loadData = TableData.data3;
-            break;
+          loadData = TableData.data3;
+          break;
         case 4:
-            loadData = TableData.data4;
-            break;
+          loadData = TableData.data4;
+          break;
         case 5:
-            loadData = TableData.data5;
-            break;
+          loadData = TableData.data5;
+          break;
         case 6:
-            loadData = TableData.data6;
-            break;
+          loadData = TableData.data6;
+          break;
         default:
-            loadData = TableData.data1;
+          loadData = TableData.data1;
       }
       if (page === 5) {
         callbackFn(loadData, {
@@ -76,7 +100,6 @@ export default class TableWrapperWidget extends Component {
       }
     }, 1000); // simulating network fetching
   }
-
 
   /**
    * When a row is touched
@@ -102,18 +125,21 @@ export default class TableWrapperWidget extends Component {
     )
   }
 
-
-
-  _filterTable(){
-    alert("filter data for ##--##"+this.state.inputSearch+"##--##"+this.state.pickerSearch);
+  /**
+   * on filtering data
+   */
+  _filterTable() {
+    alert("filter data for ##--##" + this.state.inputSearch + "##--##" + this.state.pickerSearch);
     //this._onFetch(1)
   }
 
-
+  /**
+   * @REACT DEFAULT METHOD - called to render HTML by providing all bindings
+   */
   render() {
     return (
-    <View style={[styles.container, {marginTop:60}]}>
-       <TableSearchBarTabs/>
+      <View style={[styles.container, { marginTop: 60 }]}>
+        <TableSearchBarTabs />
 
         <TableListView
           rowView={this._renderRowView}
@@ -125,31 +151,34 @@ export default class TableWrapperWidget extends Component {
           withSections={false} // enable sections
           customStyles={{
             paginationView: {
-              backgroundColor: '#00549A',
-              width:'95%',
+              backgroundColor: ColorPalletes.bellBlue,
+              width: '95%',
               alignItems: 'center',
-		          alignSelf: 'center',
-              padding:7,
-              marginTop:20
+              alignSelf: 'center',
+              padding: 7,
+              marginTop: 20
             },
           }}
-          refreshableTintColor="#FFFFFF"
+          refreshableTintColor={ColorPalletes.white}
         />
       </View>
     );
   }
-}
+};
 
+/**
+ * Create widget styles
+ */
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF'
-  },  
+    backgroundColor: ColorPalletes.white
+  },
   row: {
-    width:'95%',
-		alignSelf: 'center',
+    width: '95%',
+    alignSelf: 'center',
     padding: 15,
-    borderColor: '#75B8BE', 
-		borderBottomWidth: 1.5,
+    borderColor: ColorPalletes.bellBlue,
+    borderBottomWidth: 1.5,
   }
 });
