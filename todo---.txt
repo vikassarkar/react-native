@@ -1,0 +1,6 @@
+# i18 implementation
+# styling update
+# mock data update
+# table disable row
+# search / sort / filter
+# check box to select row

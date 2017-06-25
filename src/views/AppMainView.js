@@ -24,14 +24,14 @@ import {
 import RouteActions from './routers/RouteActions'
 
 import AppRouter from './routers/AppRouter';
-import menuList from '../config/AppMenuList.config';
+import MenuList from '../config/AppMenuList.config';
 
 export default class AppMainView extends Component {
 	constructor (props) {
 	    super(props)
 	    this.state = {
 	      menuOpen: false,
-	      routeData: menuList[0]
+	      routeData: MenuList[0]
 	    }
 	    this.toggleSideMenu = this.toggleSideMenu.bind(this)
 	}
@@ -63,7 +63,7 @@ export default class AppMainView extends Component {
 					<View style={{flex: 1, backgroundColor: '#ededed', paddingTop: 30}}>
 						<List containerStyle={{marginBottom: 20}}>
 						{
-							menuList.map((l, i) => (
+							MenuList.map((l, i) => (
 								<ListItem
 									onPress={this.renderActions.bind(this, l)}
 									listnumber={i}

@@ -9,7 +9,7 @@
  */
 const ColorPalletes = {
     white: '#FFFFFF',
-    bellBlue:'#00549A'
+    bellBlue: '#00549A'
 
 }
 export default ColorPalletes;

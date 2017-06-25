@@ -4,7 +4,10 @@
  */
 'use strict';
 
-const menuList = [
+/**
+ * Menu list for navigation sidebar
+ */
+const MenuList = [
   {
     name: 'DASHBOARD',
     key: 'page_dashboard',
@@ -19,7 +22,7 @@ const menuList = [
     name: 'MY USAGE',
     key: 'page_usage',
     subtitle: 'Your Usage Graphs'
-  },  
+  },
   {
     name: 'TABLE',
     key: 'basecomponent_table',
@@ -30,7 +33,6 @@ const menuList = [
     key: 'basecomponent_accordion',
     subtitle: 'Its base accordion widget'
   }
-]
+];
 
-
-export default menuList
+export default MenuList;
