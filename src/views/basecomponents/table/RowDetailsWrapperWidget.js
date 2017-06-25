@@ -1,3 +1,9 @@
+/**
+ * Created by Vikas
+ * DATE : 2017-03-01
+ */
+'use strict';
+
 import React, { Component, PropTypes } from 'react';
 import {
 	StyleSheet,
@@ -11,6 +17,7 @@ import {
 import { Actions, ActionConst } from 'react-native-router-flux';
 import {Grid, Col, Row} from 'react-native-elements';
 
+import store from '../../../reduxconfig/store/StoreConfiguration';
 import RouteActions from '../../routers/RouteActions';
 import arrowImg from '../../../assets/images/left-arrow.png';
 
@@ -22,8 +29,8 @@ export default class RowDetailsWrapperWidget extends Component {
 		super();
 		this.state = {
 			isLoading: false,
+			rowDetails:store.getState().TableReducer.RowDetails || {}
 		};
-
 		this._onPress = this._onPress.bind(this);
 		this.growAnimated = new Animated.Value(0);
 	}
@@ -58,10 +65,9 @@ export default class RowDetailsWrapperWidget extends Component {
                 </Row>
                 <Row size={30}>
                     <View style={styles.container}>
-                        <Text style={styles.textStyle}>Hi there This is Vikas!!</Text>
-                        <Text style={styles.textStyle}>Nice to meet you.</Text>
-                        <Text style={styles.textStyle}>I'll be updating data soon by REDUX.</Text>
-                        <Text style={styles.textStyle}>See you then.</Text>
+						<Text style={styles.textStyle}>DATA PROVIDED BY REDUX</Text>
+                        <Text style={styles.textStyle}>Row Title : {this.state.rowDetails.title}</Text>
+                        <Text style={styles.textStyle}>Row Description : {this.state.rowDetails.description}</Text>
 						<TouchableOpacity onPress={this._onPress}
 							style={styles.button}
 							activeOpacity={1}>

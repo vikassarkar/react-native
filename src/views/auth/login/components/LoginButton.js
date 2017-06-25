@@ -1,3 +1,9 @@
+/**
+ * Created by Vikas
+ * DATE : 2017-03-01
+ */
+'use strict';
+
 import React, { Component, PropTypes } from 'react';
 import {
 	StyleSheet,
@@ -11,7 +17,7 @@ import {
 } from 'react-native';
 import { Actions, ActionConst } from 'react-native-router-flux';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import {UserAction} from '../../../../reduxconfig/actions/EmmitActions';
+import {UserAction} from '../../../../reduxconfig/actions/EmmitAuthActions';
 import store from '../../../../reduxconfig/store/StoreConfiguration';
 
 export default class LoginButton extends Component {

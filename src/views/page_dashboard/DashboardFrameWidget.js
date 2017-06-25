@@ -1,3 +1,9 @@
+/**
+ * Created by Vikas
+ * DATE : 2017-03-01
+ */
+'use strict';
+
 import React, { Component } from 'react';
 import {
   Text,
@@ -22,16 +28,17 @@ export default class DashboardFrameWidget extends Component {
 
   constructor(props) {
     super(props);
-
     this.state = {      
       pageloader: true,
       dashboardVisible:false,
-      userName: store.getState().userDetails.userName
+      userName: store.getState().AuthReducer.userDetails.userName || '0'
     };
   }
-  _test(p){
+
+  _carouselSlide(p){
 
   }
+
   componentDidMount(){
     
   }
@@ -44,7 +51,7 @@ export default class DashboardFrameWidget extends Component {
                   style={styles.carauselSize}
                   autoplay
                   bullets
-                  onAnimateNextPage={(p) => this._test(p)}>
+                  onAnimateNextPage={(p) => this._carouselSlide(p)}>
                   <View style={[styles.slideSize,  styles.sliderStyle]}>
                     <SliderOne/>
                   </View>
@@ -58,8 +65,8 @@ export default class DashboardFrameWidget extends Component {
                     <SliderFour/>
                   </View>
                 </Carousel>
-                { this.state.userName &&
-                  <Text style={styles.userText}>Hi {this.state.userName} Welcome to this app.</Text>
+                { this.state.userName != '0' &&
+                  <Text style={styles.userText}>Hey <Text>{this.state.userName}</Text> Welcome to this app.</Text>
                 }
                 <GridCardsComponent/>
         </ScrollView>
@@ -84,6 +91,6 @@ const styles = StyleSheet.create({
     alignSelf:'center',
     fontSize:15,
     color:'#00549B',
-    padding:10
+    paddingTop:20
   }
 })

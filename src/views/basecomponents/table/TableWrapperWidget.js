@@ -1,19 +1,26 @@
+/**
+ * Created by Vikas
+ * DATE : 2017-03-01
+ */
+'use strict';
 
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
   View,
   Dimensions,
   TouchableOpacity
-} from 'react-native'
+} from 'react-native';
 
 import GiftedListView from '../../../libs/GiftedListView';
 import Tabs from 'react-native-tabs';
 import { Actions, ActionConst } from 'react-native-router-flux';
 
+import {RowAction} from '../../../reduxconfig/actions/EmmitTableActions';
+import store from '../../../reduxconfig/store/StoreConfiguration';
 import RouteActions from '../../routers/RouteActions'
-import HomeData from '../../../resourcesApi/HomeTableData'
+import HomeData from '../../../mockstubs/HomeTableData'
 import TableSearchBarTabs from './components/TableSearchBarTabs'
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
@@ -22,7 +29,6 @@ const DEVICE_HEIGHT = Dimensions.get('window').height;
 export default class TableWrapperWidget extends Component {
   constructor(props) {
     super(props);
-    this.callbackFunction;
     this.state={
       highlightColor:'#000',
     }
@@ -36,7 +42,8 @@ export default class TableWrapperWidget extends Component {
    * @param {object} options Inform if first load
    */
   _onFetch(page, callback, options) {
-    this.callbackFunction = callback;
+    let callbackFn = callback,
+    loadData = [];
     setTimeout(() => {
       switch(page) {
         case 1:
@@ -61,11 +68,11 @@ export default class TableWrapperWidget extends Component {
             loadData = HomeData.data1;
       }
       if (page === 5) {
-        callback(loadData, {
+        callbackFn(loadData, {
           allLoaded: true, // the end of the list is reached
         });
       } else {
-        callback(loadData);
+        callbackFn(loadData);
       }
     }, 1000); // simulating network fetching
   }
@@ -76,7 +83,7 @@ export default class TableWrapperWidget extends Component {
    * @param {object} rowData Row data
    */
   _rowPressed(rowData) {
-    alert(rowData.title);
+    store.dispatch(RowAction(rowData));
     RouteActions.route('basecomponent_table_rowDetails', Actions);
   }
 
@@ -111,7 +118,7 @@ export default class TableWrapperWidget extends Component {
         <GiftedListView
           rowView={this._renderRowView}
           onRowPress={(rowData) => this._rowPressed(rowData)}
-          onFetch={this._onFetch}
+          onFetch={(page, callback, options) => this._onFetch(page, callback, options)}
           firstLoader={true} // display a loader for the first fetching
           pagination={true} // enable infinite scrolling using touch to load more
           refreshable={true} // enable pull-to-refresh for iOS and touch-to-refresh for Android

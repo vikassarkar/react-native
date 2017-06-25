@@ -1,3 +1,8 @@
+/**
+ * Created by Vikas
+ * DATE : 2017-03-01
+ */
+'use strict';
 
 import React, { Component } from 'react'
 import {
@@ -12,7 +17,6 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Actions, ActionConst } from 'react-native-router-flux';
 import GiftedListView from '../../../../libs/GiftedListView';
 
-import HomeData from '../../../../resourcesApi/HomeTableData'
 import TableSearchComponent from './TableSearchComponent'
 import TableSortComponent from './TableSortComponent'
 import TableFilterComponent from './TableFilterComponent'

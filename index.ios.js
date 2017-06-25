@@ -1,8 +1,8 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * Created by Vikas
+ * DATE : 2017-03-01
  */
+'use strict';
 
 import React, { Component } from 'react';
 import {

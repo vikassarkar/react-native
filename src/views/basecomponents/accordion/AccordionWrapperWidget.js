@@ -1,3 +1,9 @@
+/**
+ * Created by Vikas
+ * DATE : 2017-03-01
+ */
+'use strict';
+
 import React, { Component } from 'react';
 import {
     StyleSheet,
@@ -12,7 +18,7 @@ import * as Animatable from 'react-native-animatable';
 import Collapsible from 'react-native-collapsible';
 import Accordion from 'react-native-collapsible/Accordion';
 
-import HomeData from '../../../resourcesApi/HomeAccordionData';
+import HomeData from '../../../mockstubs/HomeAccordionData';
 
 const CONTENT =[
         {

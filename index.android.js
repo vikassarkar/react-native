@@ -1,3 +1,8 @@
+/**
+ * Created by Vikas
+ * DATE : 2017-03-01
+ */
+'use strict';
 
 import React, { Component } from 'react';
 import {
@@ -13,7 +18,7 @@ import { Provider } from 'react-redux';
 import AuthRouter from './src/views/routers/AuthRouter';
 import AppMainView from './src/views/AppMainView';
 import SplashScreen from './src/views/SplashScreen';
-import {AuthAction} from './src/reduxconfig/actions/EmmitActions';
+import {AuthAction} from './src/reduxconfig/actions/EmmitAuthActions';
 import store from './src/reduxconfig/store/StoreConfiguration';
 
 

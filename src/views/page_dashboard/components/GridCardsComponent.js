@@ -1,3 +1,9 @@
+/**
+ * Created by Vikas
+ * DATE : 2017-03-01
+ */
+'use strict';
+
 import React, {Component} from 'react';
 import {Text, View, TouchableOpacity, Dimensions, StyleSheet, ScrollView} from 'react-native';
 
@@ -8,7 +14,7 @@ import Image from 'react-native-image-progress';
 import * as Progress from 'react-native-progress';
 
 import RouteActions from '../../routers/RouteActions'
-import componentsList from '../../../resourcesApi/DashboardListData';
+import componentsList from '../../../mockstubs/DashboardListData';
 
 const {width, height} = Dimensions.get('window');
 
@@ -39,7 +45,7 @@ export default class GridCardsComponent extends Component {
                 indicatorProps={{
                 size: 80,
                 borderWidth: 0,
-                color: '#00549A',
+                color: '#CCC',
                 unfilledColor: 'rgba(200, 200, 200, 0.2)'}}
                 style={styles.cardImage} />
               <View style={styles.cardContent}>

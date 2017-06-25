@@ -1,3 +1,8 @@
+/**
+ * Created by Vikas
+ * DATE : 2017-03-01
+ */
+'use strict';
 
 //in react-native-router-flux > src > NavBar.js
 //line 488 chamge
