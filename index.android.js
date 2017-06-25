@@ -13,7 +13,7 @@ import { Provider } from 'react-redux';
 import AuthRouter from './src/views/routers/AuthRouter';
 import AppMainView from './src/views/AppMainView';
 import SplashScreen from './src/views/SplashScreen';
-import {AuthAction} from './src/reduxconfig/actions/AuthActions';
+import {AuthAction} from './src/reduxconfig/actions/EmmitActions';
 import store from './src/reduxconfig/store/StoreConfiguration';
 
 

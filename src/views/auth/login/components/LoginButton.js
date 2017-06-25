@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { Actions, ActionConst } from 'react-native-router-flux';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import {UserAction} from '../../../../reduxconfig/actions/AuthAction';
+import {UserAction} from '../../../../reduxconfig/actions/EmmitActions';
 import store from '../../../../reduxconfig/store/StoreConfiguration';
 
 export default class LoginButton extends Component {

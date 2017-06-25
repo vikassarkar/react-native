@@ -1,5 +1,5 @@
 //creating the reducer to update the store
-import { STORE_AUTH, STORE_USER} from '../actions/AuthAction';
+import { STORE_AUTH, STORE_USER} from '../actions/EmmitActions';
 
 const initialState = {
   loginDetails: {
