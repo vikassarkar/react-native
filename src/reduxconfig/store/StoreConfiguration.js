@@ -4,11 +4,16 @@
  */
 'use strict';
 
+/**
+ * Import app required files
+ */
 import React from 'react';
 import { createStore } from 'redux';
 import Reducers from '../reducers/IndexReducer';
 
-// This connects the reducer to the store
+/**
+ * This connects the reducer to the store
+ */
 function configureStore() {
   let store = createStore(
     Reducers
@@ -16,6 +21,9 @@ function configureStore() {
   return store;
 }
 
+/**
+ * create store
+ */
 const store = configureStore({});
 
 export default store;

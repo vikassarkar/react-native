@@ -16,7 +16,7 @@ export const STORE_USER = 'STORE_USER';
  */
 export function AuthAction(text) {
   return { type: STORE_AUTH, text: text }
-}
+};
 export function UserAction(text) {
   return { type: STORE_USER, text: text }
-}
+};

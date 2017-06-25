@@ -4,19 +4,30 @@
  */
 'use strict';
 
-import { STORE_AUTH, STORE_USER} from '../actions/EmmitAuthActions';
+/**
+ * Import app required files
+ */
+import { STORE_AUTH, STORE_USER } from '../actions/EmmitAuthActions';
 
+/**
+ * Initilizing login values
+ */
 const initialState = {
   loginDetails: {
-      isLoggedIn: false,
-      appMounted: false
+    isLoggedIn: false,
+    appMounted: false
   },
   userDetails: {
-      userName:""
-  } 
-}
+    userName: ""
+  }
+};
 
-export default function AuthReducer(state = initialState , action) {
+/**
+ * Auth reducer function adding object in Redux Store
+ * @param {*} state 
+ * @param {*} action 
+ */
+export default function AuthReducer(state = initialState, action) {
   switch (action.type) {
     case STORE_AUTH:
       return Object.assign({}, state, {
@@ -29,4 +40,4 @@ export default function AuthReducer(state = initialState , action) {
     default:
       return state
   }
-}
+};

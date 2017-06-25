@@ -14,4 +14,4 @@ export const STORE_TABLE_ROW = 'STORE_TABLE_ROW';
  */
 export function RowAction(text) {
   return { type: STORE_TABLE_ROW, text: text }
-}
+};

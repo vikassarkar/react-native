@@ -5,14 +5,23 @@
  */
 'use strict';
 
-import { combineReducers } from 'redux'
+/**
+ * Import app required files
+ */
+import { combineReducers } from 'redux';
 
-import AuthReducer from './AuthReducer'
-import TableReducer from './TableReducer'
+/**
+ * Initilizing login values
+ */
+import AuthReducer from './AuthReducer';
+import TableReducer from './TableReducer';
 
+/**
+ * combining all available reducers to be available to store
+ */
 const Reducers = combineReducers({
   AuthReducer, 
   TableReducer
-})
+});
 
 export default Reducers;
