@@ -48,11 +48,11 @@ export default class TableSearchBarTabs extends Component {
   constructor(props) {
     super(props);
     this.callbackFunction;
-    this.state={
+    this.state = {
       tab: '',
-      highlightColor:ColorPalletes.black,
-      sortVisible:false,
-      filterVisible:false
+      highlightColor: ColorPalletes.black,
+      sortVisible: false,
+      filterVisible: false
     }
   }
   /**
@@ -60,20 +60,20 @@ export default class TableSearchBarTabs extends Component {
    * @param {*} visible 
    * @param {*} view 
    */
-  _setModalVisible(visible, view) { 
-    if(view == 'Sort'){
-        this.setState({sortVisible: visible});
+  _setModalVisible(visible, view) {
+    if (view == 'Sort') {
+      this.setState({ sortVisible: visible });
     }
-    if(view == 'Filter'){
-        this.setState({filterVisible: visible});
+    if (view == 'Filter') {
+      this.setState({ filterVisible: visible });
     }
   }
 
   /**
    * Filter table on filter submit
    */
-  _filterTable(){
-    alert("filter data for ##--##"+this.state.inputSearch+"##--##"+this.state.pickerSearch);
+  _filterTable() {
+    alert("filter data for ##--##" + this.state.inputSearch + "##--##" + this.state.pickerSearch);
     //this._onFetch(1)
   }
 
@@ -81,55 +81,55 @@ export default class TableSearchBarTabs extends Component {
    * Render Tab html
    * @param {*} view 
    */
-  _renderTabviews(view){
-    if(this.state.tab == view){
-      this.setState({tab:'', highlightColor: ColorPalletes.black});
-    }else{
-      this.setState({tab:view, highlightColor: ColorPalletes.bloodRed});
+  _renderTabviews(view) {
+    if (this.state.tab == view) {
+      this.setState({ tab: '', highlightColor: ColorPalletes.black });
+    } else {
+      this.setState({ tab: view, highlightColor: ColorPalletes.bloodRed });
     }
-    if(view == 'Sort'){
-        this.setState({tab:view, sortVisible: true});
+    if (view == 'Sort') {
+      this.setState({ tab: view, sortVisible: true });
     }
-    if(view == 'Filter'){
-        this.setState({tab:view, filterVisible: true});
+    if (view == 'Filter') {
+      this.setState({ tab: view, filterVisible: true });
     }
   }
 
   render() {
     return (
-    <View>
+      <View>
         <View style={styles.navBar}>
           <Tabs selected={this.state.tab}
-                selectedStyle={{color:this.state.highlightColor}} 
-                onSelect={(e)=>this._renderTabviews(e.props.tabName)}>
-              <FontAwesome tabName="Search" 
-                  name="search"
-                  size={20} 
-                  style={{alignSelf:'center'}}/>
-              <FontAwesome tabName="Sort" 
-                  name="sort-amount-asc"
-                  size={20} 
-                  style={{alignSelf:'center'}}/>
-              <FontAwesome tabName="Filter" 
-                  name="filter"
-                  size={20} 
-                  style={{alignSelf:'center'}}/>
-          </Tabs>    
+            selectedStyle={{ color: this.state.highlightColor }}
+            onSelect={(e) => this._renderTabviews(e.props.tabName)}>
+            <FontAwesome tabName="Search"
+              name="search"
+              size={20}
+              style={{ alignSelf: 'center' }} />
+            <FontAwesome tabName="Sort"
+              name="sort-amount-asc"
+              size={20}
+              style={{ alignSelf: 'center' }} />
+            <FontAwesome tabName="Filter"
+              name="filter"
+              size={20}
+              style={{ alignSelf: 'center' }} />
+          </Tabs>
         </View>
-        <View style={styles.tabsView}>          
-            { this.state.tab == 'Search' &&
-              <TableSearchComponent/>
-            }
-            { this.state.tab == 'Sort' && 
-              <TableSortComponent 
-                sortVisible={this.state.sortVisible} 
-                setModalVisible = {(visible) => this._setModalVisible(visible, 'Sort')}/> 
-            }
-            { this.state.tab == 'Filter' && 
-              <TableFilterComponent 
-                filterVisible={this.state.filterVisible} 
-                setModalVisible = {(visible) => this._setModalVisible(visible, 'Filter')}/> 
-            }
+        <View style={styles.tabsView}>
+          {this.state.tab == 'Search' &&
+            <TableSearchComponent />
+          }
+          {this.state.tab == 'Sort' &&
+            <TableSortComponent
+              sortVisible={this.state.sortVisible}
+              setModalVisible={(visible) => this._setModalVisible(visible, 'Sort')} />
+          }
+          {this.state.tab == 'Filter' &&
+            <TableFilterComponent
+              filterVisible={this.state.filterVisible}
+              setModalVisible={(visible) => this._setModalVisible(visible, 'Filter')} />
+          }
         </View>
       </View>
     );
@@ -147,8 +147,8 @@ const styles = StyleSheet.create({
   navBar: {
     height: 64,
     backgroundColor: ColorPalletes.dustyGrey,
-    alignItems:'center'
-  },      
+    alignItems: 'center'
+  },
   tabsView: {
     alignItems: 'center',
     width: DEVICE_WIDTH
