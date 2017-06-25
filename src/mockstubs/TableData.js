@@ -4,7 +4,10 @@
  */
 'use strict';
 
-const HomeData = {
+/**
+ * Dummy table data
+ */
+const TableData = {
     data1: [{
             title: "1 row",
             description: "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
@@ -253,4 +256,4 @@ const HomeData = {
     ]
 }
 
-export default HomeData;
+export default TableData;

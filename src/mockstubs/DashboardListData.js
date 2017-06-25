@@ -4,7 +4,10 @@
  */
 'use strict';
 
-const componentsList = [
+/**
+ * components list for dashboard
+ */
+const ComponentsList = [
   {
     name: 'Table',
     key:'table',
@@ -79,6 +82,6 @@ const componentsList = [
     buttonColor:'#9e28b4',
     source:require('../assets/images/componentCards/graphs.jpg')
   }
-]
+];
 
-export default componentsList;
+export default ComponentsList;

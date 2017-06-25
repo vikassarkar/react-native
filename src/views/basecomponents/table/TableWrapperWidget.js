@@ -20,7 +20,7 @@ import { Actions, ActionConst } from 'react-native-router-flux';
 import {RowAction} from '../../../reduxconfig/actions/EmmitTableActions';
 import store from '../../../reduxconfig/store/StoreConfiguration';
 import RouteActions from '../../routers/RouteActions'
-import HomeData from '../../../mockstubs/HomeTableData'
+import TableData from '../../../mockstubs/TableData'
 import TableSearchBarTabs from './components/TableSearchBarTabs'
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
@@ -47,25 +47,25 @@ export default class TableWrapperWidget extends Component {
     setTimeout(() => {
       switch(page) {
         case 1:
-            loadData = HomeData.data1;
+            loadData = TableData.data1;
             break;
         case 2:
-            loadData = HomeData.data2;
+            loadData = TableData.data2;
             break;
         case 3:
-            loadData = HomeData.data3;
+            loadData = TableData.data3;
             break;
         case 4:
-            loadData = HomeData.data4;
+            loadData = TableData.data4;
             break;
         case 5:
-            loadData = HomeData.data5;
+            loadData = TableData.data5;
             break;
         case 6:
-            loadData = HomeData.data6;
+            loadData = TableData.data6;
             break;
         default:
-            loadData = HomeData.data1;
+            loadData = TableData.data1;
       }
       if (page === 5) {
         callbackFn(loadData, {

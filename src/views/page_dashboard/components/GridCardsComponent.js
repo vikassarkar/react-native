@@ -14,7 +14,7 @@ import Image from 'react-native-image-progress';
 import * as Progress from 'react-native-progress';
 
 import RouteActions from '../../routers/RouteActions'
-import componentsList from '../../../mockstubs/DashboardListData';
+import ComponentsList from '../../../mockstubs/DashboardListData';
 
 const {width, height} = Dimensions.get('window');
 
@@ -36,7 +36,7 @@ export default class GridCardsComponent extends Component {
   render() {
     return (
       <View style={styles.cardsContainer}>
-        {componentsList.map((obj, index) => (
+        {ComponentsList.map((obj, index) => (
           <View style={styles.card} key={index}>
             <View style={styles.cardCol} >
               <Image 

@@ -4,7 +4,10 @@
  */
 'use strict';
 
-const HomeData = {
+/**
+ * Accordion data list
+ */
+const AccordData = {
     content: [
         {
             title: 'First Collapsible',
@@ -41,4 +44,6 @@ const HomeData = {
             value: false,
         }
     ]
-}
+};
+
+export default AccordData;
