@@ -25,6 +25,28 @@ import { Actions, ActionConst } from 'react-native-router-flux';
 import Collapsible from 'react-native-collapsible';
 import Accordion from 'react-native-collapsible/Accordion';
 
+import LocalizedStrings from 'react-native-localization';
+const strings = new LocalizedStrings({
+ "en-US":{
+   how:"How do you want your egg today?",
+   boiledEgg:"Boiled egg",
+   softBoiledEgg:"Soft-boiled egg",
+   choice:"How to choose the egg"
+ },
+ en:{
+   how:"How do you want your egg today?",
+   boiledEgg:"Boiled egg",
+   softBoiledEgg:"Soft-boiled egg",
+   choice:"How to choose the egg"
+ },
+ it: {
+   how:"Come vuoi il tuo uovo oggi?",
+   boiledEgg:"Uovo sodo",
+   softBoiledEgg:"Uovo alla coque",
+   choice:"Come scegliere l'uovo"
+ }
+});
+
 /**
  * Import widget required files
  */
@@ -121,6 +143,7 @@ export default class ProfileFrameWidget extends Component {
 					<Text style={[styles.customerDetails, styles.customerId]}>1010232345</Text>
 					<Text style={[styles.customerDetails, styles.customerName]}>Vikas Sarkar</Text>
 					<Text style={[styles.customerDetails, styles.customerAddress]}>Pune, Magarpatta, India - 411013</Text>
+					<Text style={styles.customerDetails}>{strings.how}</Text>
 				</View>
 				<ScrollView>
 					<View style={styles.scrollView}>

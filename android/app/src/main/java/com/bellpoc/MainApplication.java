@@ -3,6 +3,7 @@ package com.bellpoc;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.babisoft.ReactNativeLocalization.ReactNativeLocalizationPackage;
 import com.github.wuxudong.rncharts.MPAndroidChartPackage; //added when adding react-native-charts-wrapper
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -24,6 +25,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ReactNativeLocalizationPackage(),
             new MPAndroidChartPackage() //added when adding react-native-charts-wrapper
       );
     }
